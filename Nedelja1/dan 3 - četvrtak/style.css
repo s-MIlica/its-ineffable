@@ -1,0 +1,39 @@
+body
+{
+  background: #feeefe8f;
+}
+
+.zaglavlje {
+    background: #e6ffff;
+    text-align: center;
+}
+
+.forma {
+    background: #cceeff;
+    
+   border: cadetblue solid 5px;
+}
+
+#tabela {
+  width: 50%;
+  border: black solid 5px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  background: #faf1fab0;
+}
+table {
+    border-collapse: collapse;
+    background-color: rgba(192, 181, 243, 0.719);
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  footer {
+      margin-bottom: auto;
+  }
