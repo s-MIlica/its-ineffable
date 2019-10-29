@@ -1,0 +1,110 @@
+body
+{
+  background:  #002233;
+
+}
+
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 100px;
+}
+
+.zaglavlje {
+    background: #e6ffff;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+    background: #cceeff;
+    border: cadetblue solid 5px;
+}
+
+li {
+  display: inline;
+  font-size: 35px;
+}
+
+a {
+  display: inline-block;
+}
+
+li a {
+  color: black;
+} 
+
+li a:hover {
+  color: #e6ffff;
+  background-color: #111;
+}
+
+
+.forma {
+    width: 40%;
+    clear: both;
+    margin-left: 20px;
+    background: #cceeff;
+    border: cadetblue solid 5px;
+    padding: 20px 30px 20px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.forma input {
+  width: 90%;
+  clear: both;
+}
+
+
+#tabela {
+  width: 60%;
+  margin-right: 40px;
+  border: cadetblue solid 5px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  float: right;
+  background: #cceeff;
+  
+}
+
+caption {
+  font-size: 75px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: rgba(192, 181, 243, 0.719);
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+      }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  th {
+    width: 200px;
+    height: 80px;
+    background-color:  rgba(60, 53, 88, 0.795);
+  }
+
+  tr {
+    height: 50px;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  .rb {
+    text-align: left;
+  }
+
+  footer {
+      margin-bottom: 0px;
+      float: inherit;
+      color: white;
+  }
+
+ 
