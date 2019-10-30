@@ -1,8 +1,9 @@
-var pet;
+var x;
 var text = "";
-for (pet = 1; pet < 51; pet++) {
-     if (pet%5==0) {
-         text += pet + ", ";
+for (x = 1; x < 5001; x = x +1) {
+     if (x%5==0) {
+         x.toString; 
+         text = text + x + " ";
      }
 }
-console.log(text);
+console.log(`Prvih hiljadu brojeva koji su  deljivi  sa 5 su ${text}`);
