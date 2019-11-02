@@ -1,3 +1,13 @@
-var t = "#" , p = '' , n = 1;
+/* 
+#
+##
+###
+####
+#####
+*/
+var t = "#" , p = '' , n = 5;
 
-for ()
+for (let counter = 0; counter < n; counter++) {
+    p += t;
+    console.log(p);
+}
