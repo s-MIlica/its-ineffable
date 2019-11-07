@@ -3,6 +3,6 @@
 function priceCM(price, r) {
     let P = Math.pow(r, 2) * Math.PI; //površina pice
     let priceCM = price / P;
-
+    //return priceCM;                   da li je potrebno uraditi return????
 }
-priceCM(300, 15);
+console.log(priceCM(300, 15));

@@ -2,15 +2,15 @@
 
 function maximumThree(a, b, c) {
     if (a > b && a > c) {
-        return console.log(`Posle poređenja brojeva ${a}, ${b} i ${c} došli smo do zaključka da je ${a} najveći među njima`);
+        return a;
     
     } else if (b > c) {
-        return console.log(`Posle poređenja brojeva ${a}, ${b} i ${c} došli smo do zaključka da je ${b} najveći među njima`);
+        return b;
     
     } else {
-        return console.log(`Posle poređenja brojeva ${a}, ${b} i ${c} došli smo do zaključka da je ${c} najveći među njima`);
+        return c;
     
     }
 }
-maximumThree(102, 86, 75);
+console.log(maximumThree(102, 105, 75));
 

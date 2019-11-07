@@ -29,4 +29,4 @@ function cheapestPizza(p1, r1, p2, r2, p3, r3) {            //p se odnosi na cen
 
     minimumThree(pizza1, pizza2, pizza3);
 }
-cheapestPizza(300, 150, 300, 20, 300, 30);
+cheapestPizza(300, 10, 300, 20, 300, 20);
