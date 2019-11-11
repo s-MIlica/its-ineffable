@@ -13,4 +13,3 @@ function maximumThree(a, b, c) {
     }
 }
 console.log(maximumThree(102, 105, 75));
-
