@@ -4,6 +4,7 @@ const addTaskButton=document.querySelector('#btn-add');
 const taskListContainer=document.querySelector('#tasks-container');
 const textBoxTitle = document.querySelector('#txt-title');
 const removeAllBttn = document.querySelector('#btn-remove-all');
+const InvertBtn = document.querySelector('#btn-invert');
 console.log(taskListContainer);
 console.log(addTaskButton);
 
@@ -125,6 +126,27 @@ function removeAllSelected(e) {
     for (let i = 0; i < checkDone.length; i++) {
         if (checkDone[i].checked) {
             taskItem[i].remove();
+        }
+    }
+}
+
+InvertBtn.addEventListener('click', InvertChecked);
+
+function InvertChecked (e) {
+    console.log(e)
+  
+    let checkDone = document.querySelectorAll('.chk-state')
+    let taskItem = document.querySelectorAll('.task-item');
+    let taskTitle = document.querySelectorAll('.task-title');
+    console.log(taskItem);
+
+    for (let i = 0; i < checkDone.length; i++) {
+        if (checkDone[i].checked) {
+            checkDone[i].checked = false;
+            taskTitle[i].style.textDecoration = 'none';
+        } else {
+            checkDone[i].checked = true;  
+            taskTitle[i].style.textDecoration = 'line-through';
         }
     }
 }
