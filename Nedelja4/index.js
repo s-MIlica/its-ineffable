@@ -1,19 +1,9 @@
-//Dušanov kod
-
 const addTaskButton=document.querySelector('#btn-add');
 const taskListContainer=document.querySelector('#tasks-container');
 const textBoxTitle = document.querySelector('#txt-title');
 const removeAllBttn = document.querySelector('#btn-remove-all');
 const InvertBtn = document.querySelector('#btn-invert');
-console.log(taskListContainer);
-console.log(addTaskButton);
-
-console.log('----');
-
-console.log(addTaskButton.parentElement);
-console.log(addTaskButton.parentNode);
-
-console.log('----');
+const selectBtn = document.querySelector('#select');
 
 
 addTaskButton.addEventListener('click',btnAddClick);
@@ -52,7 +42,7 @@ function addIteam() {
     itemContainer.className='task-item';
     
     let itemText=document.createElement('p');
-    itemText.innerHTML=text;
+    itemText.innerHTML=text + ' - ' + selectBtn.value;              //ovde dodaje urgentnost taska
     itemText.className='task-title';
     console.log(itemText);
 
@@ -117,11 +107,9 @@ function handleCheckChange(e){
 removeAllBttn.addEventListener('click', removeAllSelected);
 
 function removeAllSelected(e) {
-   console.log(e.target);
 
     let checkDone = document.querySelectorAll('.chk-state')
     let taskItem = document.querySelectorAll('.task-item');
-    console.log(taskItem);
 
     for (let i = 0; i < checkDone.length; i++) {
         if (checkDone[i].checked) {
@@ -133,12 +121,10 @@ function removeAllSelected(e) {
 InvertBtn.addEventListener('click', InvertChecked);
 
 function InvertChecked (e) {
-    console.log(e)
   
     let checkDone = document.querySelectorAll('.chk-state')
     let taskItem = document.querySelectorAll('.task-item');
     let taskTitle = document.querySelectorAll('.task-title');
-    console.log(taskItem);
 
     for (let i = 0; i < checkDone.length; i++) {
         if (checkDone[i].checked) {
