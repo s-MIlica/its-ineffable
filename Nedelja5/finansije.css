@@ -1,0 +1,96 @@
+html {
+    height: 100%;
+}
+body {
+    background: linear-gradient(187deg, rgba(255,235,197,1) 22%, rgba(197,255,233,1) 46%, rgba(255,197,237,1) 67%);
+    background-repeat: no-repeat;
+}
+#unos-podataka {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#ispis-podataka {
+   /* background-color: #ffc5ed;*/
+    margin-top: 150px;
+}
+#ukupno {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 0, 255, 0.39);
+    border-top: indigo;
+}
+#unos-podataka-div {
+    margin-bottom: 35px;
+
+}
+#butn {
+    height: 36px;
+    width: 100px;
+    background: #fdd4b8a1;
+    box-shadow: 3px 1px 1px #998e78;
+    border-radius: 50px;
+    font-family: sans-serif;
+    color: #2958db;
+}
+#butn:hover {
+    background-color: #f87a26a1;
+    color: white;
+}
+#number-input {
+    height: 32px;
+    font-size: larger;
+    vertical-align: auto;
+}
+#text-input {
+    height:32px;
+    font-size: larger;
+}
+#select {
+    height: 36px;
+    background: #fdd4b8a1;
+    box-shadow: 3px 1px 1px #998e78;
+    border-radius: 50px;
+    font-family: sans-serif;    
+}
+option {
+    color: #2958db;
+}
+#select::selection{
+    color:#b8e1fd;
+}
+#zarada-ispis {
+    display: inline-block;  
+    margin-right: 125px;
+}
+#troskovi-ispis {
+    display: inline-block;
+    margin-left: 125px;
+}
+#zarada-kutija {
+    width: 500px;
+    min-height: 400px;
+    margin-left: 10px;
+    border-radius: 20px;
+     border: solid 4px #bb88d6;
+     box-shadow: 10px 5px 5px blueviolet;
+     background: linear-gradient(328deg, rgba(255,255,255,0.6727065826330532) 46%, rgba(222,222,222,0.6138830532212884) 67%); }
+ #trosak-kutija {
+    width: 500px;
+    min-height: 400px;
+    margin-right: 10px;
+    border-radius: 20px;
+    border: solid 4px #bb88d6; 
+    box-shadow: 10px 5px 5px blueviolet;
+    background: linear-gradient(328deg, rgba(255,255,255,0.6727065826330532) 46%, rgba(222,222,222,0.6138830532212884) 67%); }
+.ispisi-label {
+    padding-left: 200px;
+    font-family: sans-serif;
+}
+.ukupno-label {
+    font-family: sans-serif;
+    color: white;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="finansije.css">
+    <title>Prihodi i rashodi</title>
+</head>
+<body>
+    <main>
+        <section id="unos-podataka">
+            <div id="unos-podataka-div">
+                <select id="select">
+                    <option value="zarada">zarada</option>
+                    <option value="trosak">trošak</option>
+                </select>
+
+                <input type="number" placeholder="iznos" id="number-input" required>
+                
+                <input type="text" placeholder="opis transakcije" id="text-input" required>
+               <input type="submit" value="UNESI" id="butn">
+            </div>
+        </section>
+
+        <section id="ispis-podataka">
+             <div id="zarada-ispis"> 
+                <label class="ispisi-label">ZARAĐENO:</label>
+                <div id="zarada-kutija"></div>
+             </div> 
+
+             <div id="troskovi-ispis"> 
+                <label class="ispisi-label">POTROŠENO:</label>
+                <div id="trosak-kutija" class="kutije"></div>
+             </div> 
+        </section>
+
+        <section id="ukupno">
+            <div id="ukupno-div">
+                <label class="ukupno-label">UKUPNO:</label>
+                <p id="sve-ukupno"></p>
+
+                <label class="ukupno-label">UKUPNA ZARADA:</label>
+                <p id="ukupna-zarada"></p>
+
+                <label class="ukupno-label">UKUPAN TROŠAK:</label>
+                <p id="ukupan-trosak"></p>
+            </div>
+        </section>
+    </main>
+
+<script src="finansije.js"></script>
+</body>
+</html>
