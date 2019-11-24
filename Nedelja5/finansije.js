@@ -11,9 +11,13 @@ let zarada = 0;
 const sveUkupno = document.querySelector('#sve-ukupno');
 let ukupno = 0;
 const ukupanTrosak = document.querySelector('#ukupan-trosak');
+const ukupanTrosakProcenat = document.querySelector('#ukupan-trosak-label');
 let trosak = 0;
 
 button.addEventListener('click', checkSelector);
+text.addEventListener('keydown', (e) => {
+    if (e.keyCode == 13) { checkSelector() }
+});
 
 function checkSelector () {
     if (select.value == 'zarada') { dodajZarada() } 
@@ -82,8 +86,7 @@ function dodajTrosak () {
     tLabel.className = 'tLabel';
     let tLabelProcenat = document.createElement('label');
     tLabelProcenat.className = 'tLabel-procenat';
-    //tLabelProcenat.style.alignItems = 'right';
-
+    tLabelProcenat.style.display = 'block';
     tElemTxt.appendChild(tLabel);
     tElemTxt.appendChild(tLabelProcenat);
 
@@ -93,7 +96,6 @@ function dodajTrosak () {
     let deleteBtn = document.createElement('button');
     deleteBtn.className = 'delete-btn';
     deleteBtn.innerHTML = 'X';
-   // deleteBtn.style.display = 'none';
     
     deleteBtnDiv.appendChild(deleteBtn);
 
@@ -105,18 +107,18 @@ function dodajTrosak () {
     tLabel.innerHTML = `${number.value} RSD - ${text.value}`;
 
     let numberBr = Number(number.value);
-    ukupno += numberBr;
+    ukupno -= numberBr;
     trosak += numberBr;
     ukupanTrosak.innerHTML = trosak;
-    sveUkupno.innerHTML = `-${ukupno}`;
+    sveUkupno.innerHTML = `${ukupno}`;
 
     let uZarada = Number (ukupnaZarada.value);
     let x = Math.round(100 * numberBr / uZarada);
-    tLabelProcenat.innerHTML = ` - ${x}%`;
+    tLabelProcenat.innerHTML = `${x}%`;
 
     deleteBtn.addEventListener('click', (e) => {
         e.target.parentElement.parentElement.remove();
-        ukupno -= numberBr;
+        ukupno += numberBr;
         trosak -= numberBr;
         ukupanTrosak.innerHTML = trosak;
         sveUkupno.innerHTML = ukupno;
@@ -125,7 +127,7 @@ function dodajTrosak () {
     let uTrosak = Number (ukupanTrosak.value);
     console.log(uTrosak);
     let y = Math.round(100 * uTrosak / uZarada);
-    ukupanTrosak.innerHTML = `-${trosak} - ${y}%`;
+    ukupanTrosakProcenat.innerHTML = `${y}%`;
 
     number.value = '';
     text.value = '';

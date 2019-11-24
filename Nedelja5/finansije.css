@@ -109,7 +109,7 @@ option {
     font-family: sans-serif;
     color: white;
 }
-.ukupne-vrd {
+.ukupne-vrd, #ukupan-trosak-label {
     height: 20px;
     margin-top: 7px;
     font-size: 45px;
