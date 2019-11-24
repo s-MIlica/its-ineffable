@@ -5,6 +5,13 @@ body {
     background: linear-gradient(187deg, rgba(255,235,197,1) 22%, rgba(197,255,233,1) 46%, rgba(255,197,237,1) 67%);
     background-repeat: no-repeat;
 }
+main {
+    width: 100%;
+}
+header {
+    width: 100%;
+    margin-right: -273px;
+}
 #unos-podataka {
     position: sticky;
     top: 0;
@@ -19,14 +26,21 @@ body {
 #ukupno {
     position: fixed;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 16%;
     background-color: rgba(255, 0, 255, 0.39);
-    border-top: indigo;
+    padding-top: 15%;
+}
+.div-1 {
+    box-sizing: inherit;
+    padding-top: 7px;
+    max-width: 158px;
 }
 #unos-podataka-div {
     margin-bottom: 35px;
-
+    margin-left: 325px
 }
 #butn {
     height: 36px;
@@ -45,17 +59,20 @@ body {
     height: 32px;
     font-size: larger;
     vertical-align: auto;
+    border-radius: 15px;
 }
 #text-input {
     height:32px;
     font-size: larger;
+    border-radius: 15px;
 }
 #select {
     height: 36px;
     background: #fdd4b8a1;
     box-shadow: 3px 1px 1px #998e78;
     border-radius: 50px;
-    font-family: sans-serif;    
+    font-family: sans-serif;
+    margin-right: 15px;
 }
 option {
     color: #2958db;
@@ -66,30 +83,26 @@ option {
 #zarada-ispis {
     display: inline-block;  
     margin-right: 125px;
+    margin-left: 75px;
 }
 #troskovi-ispis {
     display: inline-block;
     margin-left: 125px;
     position: fixed;
 }
-#zarada-kutija {
-    width: 500px;
-    min-height: 400px;
+#zarada-kutija, #trosak-kutija  {
+    width: 600px;
+    min-height: 500px;
     margin-left: 10px;
     border-radius: 20px;
      border: solid 4px #bb88d6;
      box-shadow: 10px 5px 5px blueviolet;
-     background: linear-gradient(328deg, rgba(255,255,255,0.6727065826330532) 46%, rgba(222,222,222,0.6138830532212884) 67%); }
- #trosak-kutija {
-    width: 500px;
-    min-height: 400px;
-    margin-right: 10px;
-    border-radius: 20px;
-    border: solid 4px #bb88d6; 
-    box-shadow: 10px 5px 5px blueviolet;
-    background: linear-gradient(328deg, rgba(255,255,255,0.6727065826330532) 46%, rgba(222,222,222,0.6138830532212884) 67%); }
+     background: linear-gradient(328deg, rgba(255,255,255,0.6727065826330532) 46%, rgba(222,222,222,0.6138830532212884) 67%); 
+    }
 .ispisi-label {
+    display: block;
     padding-left: 200px;
+    padding-bottom: 15px;
     font-family: sans-serif;
 }
 .ukupno-label {
@@ -97,27 +110,58 @@ option {
     color: white;
 }
 .ukupne-vrd {
-    /*display: inline;*/
     height: 20px;
-    widows: 50px;
-    background-color: white;
-}
-.zLabel {
+    margin-top: 7px;
+    font-size: 45px;
+    border: blueviolet;
+    background-color: whitesmoke;
     font-family: sans-serif;
-    width: 100%;
+    max-width: 158px;
 }
 .delete-btn {
-    /*display: none; */
-    color: white;
-    background-color: black;
+    position: absolute;
+    display: none; 
+    color: blueviolet;
+    background-color: #bb88d6;
     border-radius: 50%;
+    font-size: 25px;
+    margin-left: 90px;
 }
 .delete-btn:hover {
     cursor: pointer;
+    background-color: blueviolet;
+    color: #bb88d6;
 }
+.zarada-element:hover .delete-btn-div .delete-btn {
+    display: block;
+}
+.trosak-element:hover .delete-btn-div .delete-btn {
+    display: block;
+}
+.delete-btn-div {
+    position: absolute;
+    margin-bottom: 10px;
 
-.zarada-element .trosak-element {
+}
+.zarada-element, .trosak-element {
     border-bottom-style: solid;
     border-bottom-color: orchid;
-    height: 45px;
+    min-height: 50px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.zarada-element-txt, .trosak-element-txt {
+    margin-right: 90px;
+    max-width: 350px;
+}
+.ukupno-klasa {
+    margin-bottom: 50px;
+    border-bottom: 3px solid orchid;
+    padding: 20px 10px 20px 10px;
+}
+.zLabel, .tLabel, .tLabel-procenat {
+    font-family: sans-serif;
+    width: 100%;
+    font-size: 35px;
 }

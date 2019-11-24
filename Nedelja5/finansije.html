@@ -9,7 +9,7 @@
     <title>Prihodi i rashodi</title>
 </head>
 <body>
-    <main>
+    <header>
         <section id="unos-podataka">
             <div id="unos-podataka-div">
                 <select id="select">
@@ -23,7 +23,8 @@
                <input type="submit" value="UNESI" id="butn">
             </div>
         </section>
-
+    </header>
+    <main>
         <section id="ispis-podataka">
              <div id="zarada-ispis"> 
                 <label class="ispisi-label">ZARAĐENO:</label>
@@ -35,20 +36,29 @@
                 <div id="trosak-kutija" class="kutije"></div>
              </div> 
         </section>
-
-        <section id="ukupno">
-            <div id="ukupno-div">
-                <label class="ukupno-label">UKUPNO:</label> <br>
-                <output id="sve-ukupno" class="ukupne-vrd"> </output> <br>
-
-                <label class="ukupno-label">UKUPNA ZARADA:</label> <br>
-                <output id="ukupna-zarada" class="ukupne-vrd"></output> <br>
-
-                <label class="ukupno-label">UKUPAN TROŠAK:</label> <br>
-                <output id="ukupan-trosak" class="ukupne-vrd"></output> <br>
-            </div>
-        </section>
     </main>
+    <footer>
+        <section id="ukupno">
+                <div id="ukupno-div" class="ukupno-klasa">
+                <label class="ukupno-label">UKUPNO:</label> 
+                    <div class="div-1">
+                <output id="sve-ukupno" class="ukupne-vrd">0</output> 
+                    </div>
+                </div>
+                <div id="z-ukupna-div" class="ukupno-klasa">
+                <label class="ukupno-label">UKUPNA ZARADA:</label>
+                    <div class="div-1">
+                <output id="ukupna-zarada" class="ukupne-vrd">0</output> 
+                    </div>
+                </div>
+                <div id="t-ukupno-div" class="ukupno-klasa">
+                <label class="ukupno-label">UKUPAN TROŠAK:</label> 
+                    <div class="div-1">
+                <output id="ukupan-trosak" class="ukupne-vrd">0</output> 
+                    </div>
+                </div>
+        </section>
+    </footer>
 
 <script src="finansije.js"></script>
 </body>
