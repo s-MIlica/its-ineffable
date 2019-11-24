@@ -10,6 +10,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    align-content: center;
 }
 #ispis-podataka {
    /* background-color: #ffc5ed;*/
@@ -69,6 +70,7 @@ option {
 #troskovi-ispis {
     display: inline-block;
     margin-left: 125px;
+    position: fixed;
 }
 #zarada-kutija {
     width: 500px;
@@ -93,4 +95,29 @@ option {
 .ukupno-label {
     font-family: sans-serif;
     color: white;
+}
+.ukupne-vrd {
+    /*display: inline;*/
+    height: 20px;
+    widows: 50px;
+    background-color: white;
+}
+.zLabel {
+    font-family: sans-serif;
+    width: 100%;
+}
+.delete-btn {
+    /*display: none; */
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+}
+.delete-btn:hover {
+    cursor: pointer;
+}
+
+.zarada-element .trosak-element {
+    border-bottom-style: solid;
+    border-bottom-color: orchid;
+    height: 45px;
 }
