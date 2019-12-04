@@ -21,9 +21,15 @@ class Main {
         this.myMsgsBtn.id = 'my-messages';
         this.myMsgsBtn.textContent = 'My messages';
 
+        this.username.node.id = 'username-div';
+        this.username.text.id = 'username';
+        this.username.addBtn.id = 'add-username';
         this.username.text.placeholder = 'Username';
         this.username.addBtn.value = 'Add Username';
 
+        this.addMsg.node.id = 'add-msg-div'
+        this.addMsg.text.id = 'message';
+        this.addMsg.addBtn.id = 'add-msg-btn';
         this.addMsg.text.placeholder = 'Your message here :)';
         this.addMsg.addBtn.value = 'Add your message';
 
@@ -79,7 +85,8 @@ class Main {
         })
 
         this.myMsgsBtn.addEventListener('click', () => {
-            this.chat.getUserMessagesF(usernameTxt)
+          this.chat.getUserMessagesF(usernameTxt);
+          this.node.appendChild(this.chat.getNode());
         })
       
     }

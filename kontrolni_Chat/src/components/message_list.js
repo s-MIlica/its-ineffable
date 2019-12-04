@@ -5,7 +5,7 @@ import { getMessages, getUserMessage } from "../utilities/chat-services";
 class Message_List {
     constructor() {
         this.node = document.createElement('div');
-        this.node.id = 'message-list';
+        this.node.className = 'message-list';
         //let message = new Message();
 
          
