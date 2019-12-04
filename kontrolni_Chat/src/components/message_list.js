@@ -14,9 +14,16 @@ class Message_List {
         //this.node.appendChild(message.getNode());
     }
 
-    getMessagesF() {
+    timedMessages(){
+        setInterval(() => {
+            this.getMessagesF()
+        }, 10000);
+    }
+
+
+    getMessagesF(){
     getMessages().then(data => {
-        this.loadMessages(data.data.slice(-10));
+        this.loadMessages(data.data);
     });
 }
 

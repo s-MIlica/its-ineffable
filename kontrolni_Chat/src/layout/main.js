@@ -1,7 +1,7 @@
 import { Input_Form } from "../components/input_form";
 import { Message_List } from "../components/message_list";
 import { Message } from "../components/message";
-import { saveMessage } from "../utilities/chat-services";
+import { saveMessage, getMessages } from "../utilities/chat-services";
 //import { domainToUnicode } from "url";
 
 class Main {
@@ -12,6 +12,9 @@ class Main {
         this.username = new Input_Form();
         this.chat = new Message_List();
         this.addMsg = new Input_Form();
+        this.newList = new Message_List();
+        this.newList.node.id = 'my-messages-div';
+
         
         this.deleteUserBtn = document.createElement('button');
         this.deleteUserBtn.id = 'delete-username-btn';
@@ -38,8 +41,10 @@ class Main {
         this.node.appendChild(this.username.getNode());
         this.node.appendChild(this.addMsg.getNode());
         this.node.appendChild(this.chat.getNode());
+        this.node.appendChild(this.newList.getNode());
 
-        this.chat.getMessagesF()
+        this.chat.getMessagesF();
+        this.chat.timedMessages();
         
         let usernameTxt = '';
 
@@ -85,8 +90,8 @@ class Main {
         })
 
         this.myMsgsBtn.addEventListener('click', () => {
-          this.chat.getUserMessagesF(usernameTxt);
-          this.node.appendChild(this.chat.getNode());
+        this.newList.getUserMessagesF(usernameTxt);
+        this.node.appendChild(this.newList.getNode());
         })
       
     }
