@@ -1,7 +1,7 @@
 // n počinje od nule
 
 let n = 4;
-let k = 5;
+let k = 9;
 let gr = 0; // gr = gornji deo razlomka
 let dr = 0; // dr = donji deo razlomka
 let zbir = 0;

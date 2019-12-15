@@ -13,7 +13,7 @@ Alternativno:
    Do pola slike.
 */
 
- let n = 4, p = '', rupa, sredina, broj = 1;
+ let n = 5, p = '', rupa, sredina, broj = 1;
 
  rupa = ' '.repeat(n-1);
      
@@ -28,7 +28,7 @@ Alternativno:
             broj += 2;
         } 
         
-        for (let j = 0; j < n-1; j++) {
+       /* for (let j = 0; j < n-1; j++) {
             rupa = ' '.repeat(j+1);
             sredina = ' '.repeat(n - j -1);
             p = rupa + '*' + sredina + '*' + rupa;
@@ -37,3 +37,5 @@ Alternativno:
 rupa = ' '.repeat(n-1);
 p = rupa + '*' + rupa;
 console.log(p);
+*/
+document.getElementById(java).innerHTML = p;

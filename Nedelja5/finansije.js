@@ -105,30 +105,33 @@ function dodajTrosak () {
     trosakKutija.appendChild(tElemDiv);
 
     tLabel.innerHTML = `${number.value} RSD - ${text.value}`;
-
+    
     let numberBr = Number(number.value);
-    ukupno -= numberBr;
-    trosak += numberBr;
-    ukupanTrosak.innerHTML = trosak;
-    sveUkupno.innerHTML = `${ukupno}`;
-
     let uZarada = Number (ukupnaZarada.value);
     let x = Math.round(100 * numberBr / uZarada);
+    if (x == Infinity) {return x = 0}
     tLabelProcenat.innerHTML = `${x}%`;
 
-    deleteBtn.addEventListener('click', (e) => {
-        e.target.parentElement.parentElement.remove();
-        ukupno += numberBr;
-        trosak -= numberBr;
-        ukupanTrosak.innerHTML = trosak;
-        sveUkupno.innerHTML = ukupno;
-    });
-
+    ukupno -= numberBr;
+    trosak += numberBr;
+    ukupanTrosak.innerHTML = (- trosak);
+    sveUkupno.innerHTML = ukupno;
+    
     let uTrosak = Number (ukupanTrosak.value);
     console.log(uTrosak);
     let y = Math.round(100 * uTrosak / uZarada);
+    if (y == Infinity) {return y = 0};
     ukupanTrosakProcenat.innerHTML = `${y}%`;
+
+    deleteBtn.addEventListener('click', (e) => {
+        e.target.parentElement.parentElement.remove();
+        dodajProcenat();
+    });
 
     number.value = '';
     text.value = '';
+}
+
+function dodajProcenat () {
+    
 }

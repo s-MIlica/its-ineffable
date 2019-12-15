@@ -2,7 +2,6 @@ import { Input_Form } from "../components/input_form";
 import { Message_List } from "../components/message_list";
 import { Message } from "../components/message";
 import { saveMessage, getMessages } from "../utilities/chat-services";
-//import { domainToUnicode } from "url";
 
 class Main {
     constructor() {

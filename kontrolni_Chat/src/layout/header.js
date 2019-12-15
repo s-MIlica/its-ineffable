@@ -5,8 +5,12 @@ class Header {
         this.banner.textContent = 'Welcome! Now start chatting';
         this.banner.id = 'banner';
         this.node.id = 'header';
+        this.div = document.createElement('div');
+        this.div.id = 'square';
+        this.div.style.display = 'inline-block';
 
         this.node.appendChild(this.banner);
+        this.node.appendChild(this.div);
     }
 
     getNode() {

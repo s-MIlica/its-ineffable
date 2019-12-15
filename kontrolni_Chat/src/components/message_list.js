@@ -6,12 +6,6 @@ class Message_List {
     constructor() {
         this.node = document.createElement('div');
         this.node.className = 'message-list';
-        //let message = new Message();
-
-         
-
-
-        //this.node.appendChild(message.getNode());
     }
 
     timedMessages(){
@@ -20,12 +14,11 @@ class Message_List {
         }, 10000);
     }
 
-
     getMessagesF(){
-    getMessages().then(data => {
+        getMessages().then(data => {
         this.loadMessages(data.data);
-    });
-}
+        });
+    }
 
     getUserMessagesF(username) {
         getUserMessage(username).then(data => {
