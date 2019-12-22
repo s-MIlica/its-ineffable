@@ -1,18 +1,26 @@
 html, body {
   margin: 0;
+  height: 100%;
+  background-image: url(https://i.ibb.co/s9VKNbR/IMG-20191218-142829.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 header {
   width: 100%;
+  height: 100%;
   max-height: 100%; 
   margin-top: 0;
   margin-block-end: 3em;
+ 
 }
 
 h1 {
   margin-block-start: 0em;
   padding-bottom: 0.5em;
   font-size: 175px;
+  text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
 }
 
 h4 {
@@ -21,15 +29,21 @@ h4 {
   padding-right: 15px;
   font-size: 35px;
   margin-block-start: 15em;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   /* margin-block-end: 2.7em; */
 }
 
-#header:hover  h1 {
+#header:hover h1 {
   display: none;
+  animation-name: fadeOut;
+  animation-duration: 2.5s;
 }
 
 #header:hover h4 {
   display: none;
+  opacity: 1;
+  animation-name: fadeOut;
+  animation-duration: 2.5s;
 }
 
 #header:hover #about-me {
@@ -39,8 +53,10 @@ h4 {
 #about-me {
   display: none;
   margin-block-start: 16.5em;
-  margin-block-end: 24.328em;
+  margin-block-end: 7.65em;
   margin-left: 25px;
+  font-size: 30px;
+  text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
 }
 
 #main {
@@ -50,46 +66,110 @@ h4 {
   margin-block-end: 10em;
 }
 
-.cards {
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
   display: inline-block;
-  border-style: solid;
-  border-color: black;
-  min-width: 300px;
+  margin: 15px 20px 50px 80px;  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.flip-card:last-child {
+  margin-right: 0px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #d597ce;
+  color: black;
+  font-size: 45px;
   max-width: 300px;
-  min-height: 400px;
   max-height: 400px;
-  margin: 15px 20px 50px 80px;
-  padding-left: 15px;
-  overflow: auto;
 }
 
-.card-text {
-  size: 48px;
-  max-height: 50px;
+/* Style the back side */
+.flip-card-back {
+  background-color: #f5b0cb;
+  color: white;
+  transform: rotateY(180deg);
+  max-width: 300px;
+  max-height: 400px;
+  padding-top: 10px;
 }
 
-ul {
+#card-link {
+  text-decoration: none;
+  color: white;
+}
+
+#card-link:hover {
+  color: #39375b;
+}
+
+/*cards i cardstext */
+
+li {
+  text-align: left;
+}
+
+#menu-list {
   list-style: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #745c97;
   position: fixed;
   bottom: 0;
   width: 100%;
   left: 0;
 }
 
-li {
+.menu-list-item {
   float: left;
   border-right: 1px solid #bbb;
 }
 
-li:last-child {
+.menu-list-item:last-child {
   border-right: none;
 }
 
-li .contacts-links {
+.menu-list-item .contacts-links {
   display: block;
   color: white;
   text-align: center;
@@ -97,14 +177,16 @@ li .contacts-links {
   text-decoration: none;
 }
 
-li .contacts-links:hover {
-  background-color: #111;
+.menu-list-item .contacts-links:hover {
+  background-color: #39375b;
+  color: #f5b0cb;
 }
 
 #by-me {
   float: right;
   display: block;
   padding: 14px 5px;
+  color: #f5b0cb;
 }
 
 /* #menu-size {
@@ -128,7 +210,7 @@ li .contacts-links:hover {
 }
 
 .contacts-links:hover {
-  background-color: #0a131f;
+  background-color: #39375b;
   color: white;
 }
 

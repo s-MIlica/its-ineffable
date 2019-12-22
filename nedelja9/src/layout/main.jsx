@@ -4,7 +4,7 @@ import Cards from '../component/skill-cards';
 const Main = ({data}) => {
     return (
         <main id="main">
-            {data.map(x => ( <Cards dataCard={x} key={x.cardText}/> ))}
+            {data.map(x => ( <Cards dataCard={x} key={x.cardText} /> ))}
         </main>
     )
 }

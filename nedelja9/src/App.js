@@ -7,36 +7,34 @@ import Menu from './layout/menu';
 
 function App({data}) {
 // const {link} = <a href="http://google.com"></a>
+data = [
+  { 
+    cardTitle: `IT SKILLS`,
+    cardText:<ul> <li>JavaScript</li> <li>React</li> <li>CSS</li> <li>HTML</li> <li>GitHub</li> <li>Audacity</li> <li>Microsoft Office</li> </ul>
+  },
 
-  data = [
-    { 
-      id: 0,
-      cardTitle: `IT SKILLS`,
-      cardText: `JavaScript, React, CSS, HTML, Audacity, Microsoft Office`
-    },
-    {
-      id: 1,
-      cardTitle: `PROJECTS`,
-      cardText: /*${link}GitHub*/ `You can find my projects on my GitHub linked below`
-    },
-    {
-      id: 2,
-      cardTitle: `OTHER SKILLS`,
-      cardText: `English, Italian, blablablabla`
-    },
-    {
-      id: 3,
-      cardTitle: `HOBBIES`,
-      cardText: `sve i svašta (dodati)`
-    }
-  ]
+  {
+    cardTitle: `PROJECTS`,
+    cardText: <a href="https://www.github.com/s-MIlica" target="_blank" rel="noopener noreferrer" title="Link to my GitHub" id="card-link">You can find my projects on my GitHub</a>
+  },
+
+  {
+    cardTitle: `OTHER SKILLS`,
+    cardText: <ul> <li>English</li> <li>Italian</li> <li>blablablabla </li> </ul>
+  },
+
+  {
+    cardTitle: `HOBBIES`,
+    cardText: <ul> <li>sve</li> <li>i", "svašta (dodati)</li> </ul>
+  }
+]
 
   return (  
     <div className="App">
-      <Header></Header>
-      <Main data={data}></Main>
+      <Header />
+      <Main data={data} />
       {/* <Footer></Footer> */}
-      <Menu></Menu>
+      <Menu />
     </div>
   );
 }
