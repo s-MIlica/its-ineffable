@@ -1,0 +1,141 @@
+html, body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  max-height: 100%; 
+  margin-top: 0;
+  margin-block-end: 3em;
+}
+
+h1 {
+  margin-block-start: 0em;
+  padding-bottom: 0.5em;
+  font-size: 175px;
+}
+
+h4 {
+  text-align: right;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  font-size: 35px;
+  margin-block-start: 15em;
+  /* margin-block-end: 2.7em; */
+}
+
+#header:hover  h1 {
+  display: none;
+}
+
+#header:hover h4 {
+  display: none;
+}
+
+#header:hover #about-me {
+  display: inline-block;
+}
+
+#about-me {
+  display: none;
+  margin-block-start: 16.5em;
+  margin-block-end: 24.328em;
+  margin-left: 25px;
+}
+
+#main {
+  min-height: inherit;
+  margin-left: 80px;
+  margin-block-start: 15em;
+  margin-block-end: 10em;
+}
+
+.cards {
+  display: inline-block;
+  border-style: solid;
+  border-color: black;
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 400px;
+  max-height: 400px;
+  margin: 15px 20px 50px 80px;
+  padding-left: 15px;
+  overflow: auto;
+}
+
+.card-text {
+  size: 48px;
+  max-height: 50px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li .contacts-links {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 7px 16px;
+  text-decoration: none;
+}
+
+li .contacts-links:hover {
+  background-color: #111;
+}
+
+#by-me {
+  float: right;
+  display: block;
+  padding: 14px 5px;
+}
+
+/* #menu-size {
+  height: 48px;
+  bottom: 0;
+  background-color: #244066;
+}
+
+#footer-div {
+  height: 65px;
+  width: 100%;
+  background-color: #244066;
+} */
+
+.contacts-links {
+  display: inline-block;
+  height: 55px;
+  text-decoration: none;
+  color: black;
+  padding: 5px 15px 0px 8px;
+}
+
+.contacts-links:hover {
+  background-color: #0a131f;
+  color: white;
+}
+
+.email {
+  float: right;
+  display: block;
+  padding-right: 10px;
+  padding-bottom: 15px;
+}
+
