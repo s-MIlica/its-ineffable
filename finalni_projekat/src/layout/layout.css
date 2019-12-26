@@ -1,0 +1,119 @@
+html body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    /* background-image: url(https://www.greyscape.com/wp-content/uploads/2019/04/Manhattan-apartments-Lodz-Poland-brutalist-architecture.jpg;); */
+}
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    background-color: red;
+    height: 80px;
+    padding-top: 25px;
+}
+
+h1 {
+    margin-block-start: 0em;
+    color: yellow;
+}
+
+.main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.RL-forma {
+    display: inline-block;
+    margin-block-start: 10em;
+    padding-left: 0;
+    background-color: red;
+    margin-right: 15px;
+    margin-left: 15px;
+    min-width: 400px;  
+    min-height: 400px;
+    max-width: 400px;  
+    max-height: 400px;  
+    padding-top: 30px;
+
+}
+
+.RL-label {
+    color:yellow;
+    float: left;
+    padding-left: 8px;
+}
+
+.Register-label {
+    color: yellow;
+}
+
+.Login-label {
+    color: yellow;
+}
+
+.lista-tema{
+    display: inline-block;
+    margin-block-start: 10em;
+    padding-left: 0;
+    background-color: red;
+    margin-right: 15px;
+    margin-left: 15px;
+    min-width: 400px;  
+    min-height: 400px;
+    max-width: 400px;  
+    max-height: 400px;  
+    padding-top: 30px;
+    overflow-y: auto;
+}
+
+input[type=text], input[type=email], input[type=password] {
+    margin-left: 5px;
+    float: center;
+    margin-left: -5px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4.5rem;
+    background-color: red;
+    color: yellow;
+}
+
+.creator-name {
+    margin-block-start: 2em;
+    margin-block-end: 0em;
+    font-size: 16px;
+    text-align: right;
+    margin-right: 35px;
+}
+
+.comrade-Milica {
+    margin-block-start: 0em;
+    margin-block-end: 1em;
+    font-size: 14px;
+    text-align: right;
+    margin-right: 15px;
+}
+.lista-tema {
+    color: black
+}
+
+img {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+
+.welcome-header {
+    display: inline-block;
+}
+ul, li{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
